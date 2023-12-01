@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  </button>
+  <span [routerLink]="'/'">Sonali ExamPortal</span>
+  <span class="example-spacer"></span>
+  <a *ngIf="!isLoggedIn" class="ml2" [routerLink]="'/login'">
+
+    Login
+  </a>
+  <a *ngIf="isLoggedIn" class="ml2" (click)="logout()">
+    <mat-card>
+      <mat-action-list>
+        <button mat-list-item class="header_button" routerLink="/admin/add-quiz">
+          <mat-icon mat-list-icon>logout</mat-icon>Logout
+        </button>
+
+      </mat-action-list>
+    </mat-card>
+  </a>
+
+
+
+  <a *ngIf="!logi.isLoggedIn()" class="mr1" [routerLink]="'/signup'">
+    Register
+  </a>
+</mat-toolbar>

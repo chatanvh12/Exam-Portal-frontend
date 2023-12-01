@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div class="bootstrap-wraper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 ">
+                    <mat-card class="card">
+                        <h1 class="text-center ">SignIn</h1>
+                        <form (ngSubmit)="FormSubmit()">
+
+                            <mat-form-field appearance="fill" class="form-control">
+                                <mat-label>User Name</mat-label>
+                                <input matInput placeholder="UserName" [(ngModel)]="userData.username" name="username">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill" class="form-control">
+                                <mat-label>Password</mat-label>
+                                <input matInput placeholder="password" [(ngModel)]="userData.password" type="password"
+                                    name="password">
+                            </mat-form-field>
+                            <div class="example-button-row mb-2 text-center">
+                                <button mat-raised-button color="primary" style="width: 95%;">Login</button>
+                            </div>
+                        </form>
+                    </mat-card>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
