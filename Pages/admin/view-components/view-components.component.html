@@ -1,0 +1,22 @@
+<mat-card>
+    <div *ngFor="let c of categories">
+        <mat-accordion >
+            <mat-expansion-panel class="m-1"hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <mat-icon>category</mat-icon>
+                        {{ c.title}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        <p>Added on 30/08/2023</p>
+                    </mat-panel-description>
+                    <button class="d-flex justify-content-end" mat-raised-button (click)="Delete(c.cId)" color="accent">Delete</button>
+                </mat-expansion-panel-header>
+                {{c.discription}}
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <mat-card class="mt-2">
+        <mat-card-content class="d-flex justify-content-center "> <button  mat-raised-button color="accent" routerLink="/admin/add-categories"><mat-icon>add</mat-icon>Add Categories</button></mat-card-content>
+    </mat-card>
+</mat-card>
